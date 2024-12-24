@@ -12,10 +12,10 @@ app.get('/', (req, res) => {
     res.send("Blog server is running!")
 });
 
-app.get('/blogs', (req, res) => {
+app.get('/api/blogs', (req, res) => {
   res.send(blogs)
 })
-app.get('/blogs/:id', (req, res) => {
+app.get('/api/blogs/:id', (req, res) => {
   const id = parseInt(req.params.id);
   // console.log(id)
   const blog = blogs.filter(b => b.id === id);
